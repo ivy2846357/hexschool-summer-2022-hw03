@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    導覽列設定
+/*------------------------------------*\
+    
+.navbar
+    background-color: $color-primary
+
+    &-item
+        +flexGrid(space-between)
+
+    &-menu
+        +flexGrid(space-between)
+
+    &-link
+        color: $color-white
+        transition: .2s
+        display: inline-block
+        padding: 16px 32px
+        border-radius: 48px
+        &:hover
+            background-color: $color-secondary
+            color: $color-primary
+    
+    &-img
+        padding: 16px
