@@ -1,0 +1,216 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    SASS 檔案整理 */
+/*------------------------------------*\ */
+/*------------------------------------*\
+    mixin 設定 */
+/*------------------------------------*\ */
+/* ------------------- 斷點設定 ------------------- */
+/* ------------------- mixin 設定 ------------------- */
+/*------------------------------------*\
+    CSS reset */
+/*------------------------------------*\ */
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  padding: 0 312px; }
+
+/*------------------------------------*\
+    導覽列設定 */
+/*------------------------------------*\ */
+.navbar {
+  background-color: #AA0601; }
+  .navbar-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .navbar-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .navbar-link {
+    color: white;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 48px; }
+    .navbar-link:hover {
+      background-color: #FBF2F2;
+      color: #AA0601; }
+  .navbar-img {
+    padding: 16px; }
+
+/*------------------------------------*\
+    footer 設定 */
+/*------------------------------------*\ */
+.footer {
+  padding: 48px 0 32px 0;
+  background-color: #AA0601; }
+  .footer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .footer-menu {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .footer-menu-link {
+      color: white;
+      margin-right: 24px;
+      position: relative; }
+      .footer-menu-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: white;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+      .footer-menu-link:hover::after {
+        width: 100%; }
+  .footer-copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 32px;
+    color: white; }
+    .footer-copyright-menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .footer-copyright-item {
+      margin-right: 48px; }
+      .footer-copyright-item:last-child {
+        margin-right: 0; }
+    .footer-copyright-link {
+      color: white;
+      position: relative; }
+      .footer-copyright-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: white;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+      .footer-copyright-link:hover::after {
+        width: 100%; }
+
+.social-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .social-menu-item {
+    margin-right: 24px; }
+    .social-menu-item:last-child {
+      margin-right: 0; }
+
+.contact-list {
+  padding: 35px 0;
+  border-bottom: 1px solid white; }
+  .contact-list-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .contact-list-img {
+    margin-right: 20px;
+    width: 36px;
+    height: 36px; }
+  .contact-list-link {
+    font-size: 36px;
+    line-height: 54px;
+    font-weight: 400;
+    color: white; }
+
+/*# sourceMappingURL=all.css.map */
