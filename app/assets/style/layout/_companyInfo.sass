@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    首頁公司特色
+/*------------------------------------*\
+
+.company-info
+
+    &-list
+        +flexGrid(center,flex-start)
+        margin-top: 32px
+
+    &-item
+        width: 25%
+        margin-right: 24px
+        +flexGrid(center,center,column)
+        &:last-child
+            margin-right: 0
+
+    // 特色內容
+    &-img
+        +size(83px)
+        margin-bottom: 24px
+
+    &-title
+        +fontSize(24px,36px,bold)
+        color: $color-third
+        margin-bottom: 8px
+    
+    &-word
+        +fontSize(16px,24px)

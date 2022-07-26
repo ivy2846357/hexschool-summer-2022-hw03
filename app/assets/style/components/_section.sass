@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    共用區塊設定
+/*------------------------------------*\
+
+.section
+    padding: 80px 312px
+    +flexGrid(center,center,column)
+
+    // 共用標題
+    &-title
+        +fontSize(48px,72px,bold)
+        text-align: center
+        &.red
+            color: $color-third
+        &.white
+            color: $color-white
+
+    // 底色區塊
+    &.fill
+        background-color: $color-secondary
+        
+    // 共用副標題
+    &-subtitle
+        +fontSize(48px,72px,bold)
+        color: $color-primary
+        background-color: $color-white
+        text-align: center
+
+    // 共用文字樣式
+    &-word
+        +fontSize(20px,30px)
+        width: 636px

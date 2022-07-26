@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    首頁 banner 區塊
+/*------------------------------------*\
+
+.header
+    +size(100%, 787px)
+    +backgroundCover('../images/banner.png')
+    +flexGrid(flex-end)
+    text-align: right
+
+    &-subtitle 
+        +fontSize(36px, 54px)
+        color: $color-third
+
+    &-title 
+        +fontSize(64px, 96px, bold)
+        color: $color-third
+
+    &-btn
+        +fontSize(20px, 30px)
+        background-color: $color-primary
+        color: $color-white
+        padding: 6px 12px
+        cursor: pointer
+        @extend .border-none

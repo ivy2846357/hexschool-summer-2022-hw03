@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    商品特色區塊
+/*------------------------------------*\
+
+.feature
+
+    // 經典系列商品
+    &-classic
+
+        &-list
+            display: flex
+            margin-top: 48px
+
+        &-item
+            margin-right: 24px
+            &:last-child
+                margin-right: 0
+
+        &-img
+            margin-bottom: 8px
+
+    // 聯名設計商品
+    &-signed
+        +backgroundCover('../images/bg.png')
+
+        &-list
+            display: flex
+            margin-top: 48px
+
+        &-img
+            +size(648px, 240px)
+
+// 商品圖片
+.woman-img
+    +backgroundCover('../images/product-8.png')
+
+.glasses-img
+    +backgroundCover('../images/product-9.png')

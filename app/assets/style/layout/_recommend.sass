@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    顧客推薦設定
+/*------------------------------------*\
+
+.recommend
+
+    &-list
+        +flexGrid(space-between)
+        margin-top: 48px
+
+        &-item
+            +size(306px, 511px)
+            border-radius: 4px
+            overflow: hidden
+            box-shadow: 0 2px 6px #00000029
+            margin-right: 24px
+
+    &-img
+        +size(306px)
+
+    &-content
+        padding: 16px
+        height: 177px
+        +flexGrid(space-between,flex-start,column)
+        +fontSize(16px,24px)
+
+    &-text
+        display: block
+    &-date
+        color: $color-darkGary
+
+/* ------------------- 圖片設定 ------------------- */
+
+@for $i from 1 through 4
+    .recommend-img
+        &.customer-0#{$i}
+            +backgroundCover('../images/rec-#{$i}.png')
