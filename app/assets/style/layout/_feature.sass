@@ -16,6 +16,7 @@
 
             +respond-to('sphone')
                 width: 100%
+                margin-top: 24px
             
         &-item
             margin-right: 24px
@@ -25,12 +26,13 @@
             +respond-to('phone')
                 +flexGrid(flex-start,center,column)
                 width: 100%
-
-            +respond-to('sphone')
-                margin-right: 0
+                margin: 0 0 24px 0
 
         &-img
             margin-bottom: 8px
+
+            +respond-to('phone')
+                width: 50%
 
             +respond-to('sphone')
                 width: 100%
@@ -46,6 +48,8 @@
 
             +respond-to('phone')
                 flex-wrap: wrap
+            +respond-to('sphone')
+                margin-top: 24px
 
         &-item
             +size(100%)

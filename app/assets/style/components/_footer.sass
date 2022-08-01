@@ -13,6 +13,10 @@
     &-list
         +flexGrid(space-between)
 
+        +respond-to('sphone')
+            +flexGrid(space-between,flex-start)
+            border-bottom: 1px solid $color-white
+
     &-menu
         +fontSize(16px, 24px)
         display: flex
@@ -71,7 +75,12 @@
             margin-right: 0
 
         +respond-to('sphone')
-            +size(24px)
+            margin-right: 8px
+
+    &-link
+        >img 
+            +respond-to('sphone')
+                +size(24px)
 
 // 聯絡方式
 .contact-list
@@ -80,6 +89,7 @@
 
     +respond-to('sphone')
         padding: 0 0 16px 0
+        border-bottom: none
     
     &-item
         display: flex
@@ -89,10 +99,15 @@
         +size(36px)
 
         +respond-to('sphone')
-            +size(24px)
+            +size(16px)
+            margin-right: 12px
+
     &-link
         +fontSize(36px,54px)
         color: $color-white
         transition: .3s
         &:hover
             color: #ffba08
+
+        +respond-to('sphone')
+            +fontSize(16px,24px)

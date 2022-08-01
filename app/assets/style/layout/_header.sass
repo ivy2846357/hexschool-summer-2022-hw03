@@ -8,13 +8,21 @@
     +flexGrid(flex-end)
     text-align: right
 
+    +respond-to('sphone')
+        +size(100%,396px)
+
     &-subtitle 
         +fontSize(36px, 54px)
         color: $color-third
 
+        +respond-to('sphone')
+            +fontSize(16px,24px)
+
     &-title 
         +fontSize(64px, 96px, bold)
         color: $color-third
+        +respond-to('sphone')
+            +fontSize(24px,36px,bold)
 
     &-btn
         +fontSize(20px, 30px)
