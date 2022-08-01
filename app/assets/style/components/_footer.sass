@@ -6,6 +6,9 @@
     padding: 48px 0 32px 0
     background-color: $color-primary
 
+    +respond-to('sphone')
+        padding: 24px 0
+
     // footer 導覽列
     &-list
         +flexGrid(space-between)
@@ -25,18 +28,38 @@
         margin-top: 32px
         color: $color-white
 
+        +respond-to('sphone')
+            +flexGrid(flex-start,flex-start,column)
+            margin-top: 16px
+
         &-menu
             display: flex
+
+            +respond-to('sphone')
+                flex-wrap: wrap
 
         &-item
             margin-right: 48px
             &:last-child
                 margin-right: 0
 
+            +respond-to('sphone')
+                width: 100%
+                margin: 8px 0 0 0
+
         &-link
             color: $color-white
             position: relative
             @extend .link-border-animation
+
+    &-lg
+        +respond-to('sphone')
+            display: none
+
+    &-sm
+        display: none
+        +respond-to('sphone')
+            display: block
 
 // 社群按鈕
 .social-menu
@@ -47,10 +70,16 @@
         &:last-child
             margin-right: 0
 
+        +respond-to('sphone')
+            +size(24px)
+
 // 聯絡方式
 .contact-list
     padding: 35px 0
     border-bottom: 1px solid $color-white
+
+    +respond-to('sphone')
+        padding: 0 0 16px 0
     
     &-item
         display: flex
@@ -58,6 +87,9 @@
     &-img
         margin-right: 20px
         +size(36px)
+
+        +respond-to('sphone')
+            +size(24px)
     &-link
         +fontSize(36px,54px)
         color: $color-white

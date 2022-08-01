@@ -14,6 +14,9 @@
             +respond-to('phone')
                 flex-wrap: wrap
 
+            +respond-to('sphone')
+                width: 100%
+            
         &-item
             margin-right: 24px
             &:last-child
@@ -23,8 +26,14 @@
                 +flexGrid(flex-start,center,column)
                 width: 100%
 
+            +respond-to('sphone')
+                margin-right: 0
+
         &-img
             margin-bottom: 8px
+
+            +respond-to('sphone')
+                width: 100%
 
     // 聯名設計商品
     &-signed

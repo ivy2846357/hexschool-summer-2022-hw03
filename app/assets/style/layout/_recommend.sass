@@ -24,6 +24,12 @@
                 &:nth-child(2)
                     margin-bottom: 24px
 
+            +respond-to('sphone')
+                +size(100%, 511px)
+                margin: 0 0 24px 0
+                &:last-child
+                    margin-bottom: 0
+
     &-img
         +size(100%, 50%)
 
