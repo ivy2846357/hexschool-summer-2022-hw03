@@ -8,12 +8,20 @@
         +flexGrid(center,flex-start)
         margin-top: 32px
 
+        +respond-to('phone')
+            flex-wrap: wrap
+
     &-item
         width: 25%
         margin-right: 24px
         +flexGrid(center,center,column)
         &:last-child
             margin-right: 0
+
+        +respond-to('phone')
+            width: 48%
+            &:nth-child(2n)
+                margin-right: 0
 
     // 特色內容
     &-img

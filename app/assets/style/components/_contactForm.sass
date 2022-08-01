@@ -5,6 +5,8 @@
 .form
     width: 636px
     margin: 24px 0 48px 0
+    +respond-to('phone')
+        width: 100%
 
     // 文字設定
     &-text
@@ -20,6 +22,7 @@
         background-color: transparent
         outline: none
         border: 1px solid $color-black
+        box-sizing: border-box
 
         &:focus
             outline: none
