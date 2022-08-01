@@ -7,9 +7,16 @@
 /*------------------------------------*\ */
 /* ------------------- 斷點設定 ------------------- */
 /* ------------------- mixin 設定 ------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .border-none, .form-submit-btn, .header-btn {
   border: none;
   outline: none; }
+
+/*------------------------------------*\
+    字體設定 */
+/*------------------------------------*\ */
+body {
+  font-family: 'Noto Sans TC', sans-serif; }
 
 /*------------------------------------*\
     CSS reset */
@@ -164,6 +171,9 @@ img {
       .navbar-menu-item:last-child {
         margin-right: 0; }
     .navbar-menu-link {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 400;
       color: white;
       -webkit-transition: .2s;
       -o-transition: .2s;
@@ -196,6 +206,22 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media screen and (max-width: 375px) {
+      .footer-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        border-bottom: 1px solid white; } }
   .footer-menu {
     font-size: 16px;
     line-height: 24px;
@@ -277,15 +303,19 @@ img {
       margin-right: 0; }
     @media screen and (max-width: 375px) {
       .social-menu-item {
-        width: 24px;
-        height: 24px; } }
+        margin-right: 8px; } }
+  @media screen and (max-width: 375px) {
+    .social-menu-link > img {
+      width: 24px;
+      height: 24px; } }
 
 .contact-list {
   padding: 35px 0;
   border-bottom: 1px solid white; }
   @media screen and (max-width: 375px) {
     .contact-list {
-      padding: 0 0 16px 0; } }
+      padding: 0 0 16px 0;
+      border-bottom: none; } }
   .contact-list-item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -299,8 +329,9 @@ img {
     height: 36px; }
     @media screen and (max-width: 375px) {
       .contact-list-img {
-        width: 24px;
-        height: 24px; } }
+        width: 16px;
+        height: 16px;
+        margin-right: 12px; } }
   .contact-list-link {
     font-size: 36px;
     line-height: 54px;
@@ -311,6 +342,11 @@ img {
     transition: .3s; }
     .contact-list-link:hover {
       color: #ffba08; }
+    @media screen and (max-width: 375px) {
+      .contact-list-link {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400; } }
 
 /*------------------------------------*\
     共用區塊設定 */
@@ -366,12 +402,19 @@ img {
       color: #650300; }
     .section-index-title.white {
       color: white; }
+    @media screen and (max-width: 375px) {
+      .section-index-title {
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: bold; } }
   .section-index.fill {
     background-color: #FBF2F2; }
   .section-index-subtitle {
     font-size: 48px;
     line-height: 72px;
     font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
     color: #AA0601;
     background-color: white;
     text-align: center; }
@@ -379,9 +422,14 @@ img {
     font-size: 20px;
     line-height: 30px;
     font-weight: 400;
+    margin-top: 48px;
     width: 636px; }
     @media screen and (max-width: 768px) {
       .section-index-word {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        margin-top: 24px;
         width: 100%; } }
 
 /*------------------------------------*\
@@ -443,16 +491,30 @@ img {
       -ms-flex-align: center;
           align-items: center;
   text-align: right; }
+  @media screen and (max-width: 375px) {
+    .header {
+      width: 100%;
+      height: 396px; } }
   .header-subtitle {
     font-size: 36px;
     line-height: 54px;
     font-weight: 400;
     color: #650300; }
+    @media screen and (max-width: 375px) {
+      .header-subtitle {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400; } }
   .header-title {
     font-size: 64px;
     line-height: 96px;
     font-weight: bold;
     color: #650300; }
+    @media screen and (max-width: 375px) {
+      .header-title {
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: bold; } }
   .header-btn {
     font-size: 20px;
     line-height: 30px;
@@ -544,7 +606,8 @@ img {
           flex-wrap: wrap; } }
   @media screen and (max-width: 375px) {
     .feature-classic-list {
-      width: 100%; } }
+      width: 100%;
+      margin-top: 24px; } }
 
 .feature-classic-item {
   margin-right: 24px; }
@@ -565,13 +628,14 @@ img {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      width: 100%; } }
-  @media screen and (max-width: 375px) {
-    .feature-classic-item {
-      margin-right: 0; } }
+      width: 100%;
+      margin: 0 0 24px 0; } }
 
 .feature-classic-img {
   margin-bottom: 8px; }
+  @media screen and (max-width: 768px) {
+    .feature-classic-img {
+      width: 50%; } }
   @media screen and (max-width: 375px) {
     .feature-classic-img {
       width: 100%; } }
@@ -591,6 +655,9 @@ img {
       .feature-signed-list {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; } }
+    @media screen and (max-width: 375px) {
+      .feature-signed-list {
+        margin-top: 24px; } }
   .feature-signed-item {
     width: 100%;
     height: 100%;
@@ -641,6 +708,9 @@ img {
     .recommend-list {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; } }
+  @media screen and (max-width: 375px) {
+    .recommend-list {
+      margin-top: 24px; } }
   .recommend-list-item {
     width: 25%;
     height: 511px;
@@ -693,6 +763,9 @@ img {
   display: block; }
 
 .recommend-date {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
   color: #707070; }
 
 /* ------------------- 圖片設定 ------------------- */
