@@ -26,9 +26,21 @@
         &-list
             display: flex
             margin-top: 48px
+            +size(100%,auto)
+
+        &-item
+            +size(100%)
+            cursor: pointer
+            >h4
+                transition: .3s
+
+            &:hover
+                >h4
+                    background-color: $color-primary
+                    color: #fff
 
         &-img
-            +size(648px, 240px)
+            +size(100%, 240px)
 
 // 商品圖片
 .woman-img

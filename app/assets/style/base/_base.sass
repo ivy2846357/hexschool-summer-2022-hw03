@@ -2,9 +2,51 @@
     共用樣式設定
 /*------------------------------------*\
 
+/* ------------------- 顏色設定 ------------------- */
+
+$color-primary: #AA0601
+$color-secondary: #FBF2F2
+$color-third: #650300
+
+$color-lightGary: #DEE2E6
+$color-gary: #00000029
+$color-darkGary: #707070
+
+$color-white: white
+$color-black: black
+
 .container
     padding: 0 312px
+    max-width: 1296px
     
 .img-hidden
     overflow: hidden
     object-position: 50% 50%
+
+/* ------------------- 動畫設定 ------------------- */
+
+.link-border-animation
+    position: relative
+    &::after
+        content: ''
+        position: absolute
+        bottom: -4px
+        left: 0
+        width: 0
+        height: 1px
+        background-color: $color-white
+        transition: .3s
+
+    &:hover
+        &::after
+            width: 100%
+
+.hover-translate-animation
+    transition: .3s
+    &:hover
+        transform: translateY(-10px)
+
+.hover-btn-animation
+    transition: .3s
+    &:hover
+        background-color: $color-third
