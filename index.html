@@ -33,6 +33,9 @@
           <a class="navbar-menu-link" href="#">常見問題</a>
         </li>
       </ul>
+      <div class="navbar-hamburger-menu">
+        <div class="navbar-hamburger-btn"></div>
+      </div>
     </div>
   </nav>
 
@@ -279,5 +282,17 @@
   <script src="./assets/js/vendors.js"></script>
   <script src="./assets/js/all.js"></script>
 </body>
+
+<script>
+  let hamburgerMenu = document.querySelector('.navbar-hamburger-menu')
+  let hamburgerBtn = document.querySelector('.navbar-hamburger-btn')
+  let navbarMenu = document.querySelector('.navbar-menu')
+
+  hamburgerMenu.addEventListener('click', function(){
+    hamburgerBtn.classList.toggle('active')
+    navbarMenu.classList.toggle('active')
+  })
+
+</script>
 
 </html>
