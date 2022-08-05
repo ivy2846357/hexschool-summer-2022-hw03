@@ -3,24 +3,16 @@
 /*------------------------------------*\
 
 .section
+
+    // 底色區塊
+    &-fill
+        background-color: $color-secondary
+    
     // 首頁樣式
-
     &-index
-        padding: 80px 312px
-        +flexGrid(center,center,column)
-        +respond-to('phone')
-            padding: 80px 36px
+        padding: 80px 12px
         +respond-to('sphone')
-            padding: 40px 13px
-
-        &-form
-            padding: 80px 312px
-            background-color: $color-secondary
-            +flexGrid(center,center,column)
-            +respond-to('phone')
-                padding: 80px 96px
-            +respond-to('sphone')
-                padding: 40px 13px
+            padding: 40px 12px
 
         // 共用標題
         &-title
@@ -33,10 +25,6 @@
 
             +respond-to('sphone')
                 +fontSize(24px,36px,bold)
-
-        // 底色區塊
-        &.fill
-            background-color: $color-secondary
             
         // 共用副標題
         &-subtitle
@@ -57,3 +45,7 @@
                 +fontSize(16px,24px)
                 margin-top: 24px
                 width: 100%
+
+    &-form
+        +flexGrid(center,center)
+        flex-direction: column

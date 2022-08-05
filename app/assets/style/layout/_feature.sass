@@ -8,23 +8,24 @@
     &-classic
 
         &-list
-            display: flex
+            +flexGrid(flex-start,center)
             margin-top: 48px
-
-            +respond-to('phone')
-                flex-wrap: wrap
+            flex-wrap: wrap
 
             +respond-to('sphone')
                 width: 100%
                 margin-top: 24px
             
         &-item
+            width: 30%
             margin-right: 24px
+            overflow: hidden
             &:last-child
                 margin-right: 0
 
             +respond-to('phone')
-                +flexGrid(flex-start,center,column)
+                +flexGrid(flex-start,center)
+                flex-direction: column
                 width: 100%
                 margin: 0 0 24px 0
 
@@ -44,7 +45,6 @@
         &-list
             display: flex
             margin-top: 48px
-            +size(100%,auto)
 
             +respond-to('phone')
                 flex-wrap: wrap
@@ -67,7 +67,7 @@
                     margin-bottom: 24px
 
         &-img
-            +size(100%, 240px)
+            height: 240px
 
 // 商品圖片
 .woman-img

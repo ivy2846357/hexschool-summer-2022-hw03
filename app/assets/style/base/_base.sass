@@ -2,32 +2,20 @@
     共用樣式設定
 /*------------------------------------*\
 
-/* ------------------- 顏色設定 ------------------- */
-
-$color-primary: #AA0601
-$color-secondary: #FBF2F2
-$color-third: #650300
-
-$color-lightGary: #DEE2E6
-$color-gary: #00000029
-$color-darkGary: #707070
-
-$color-white: white
-$color-black: black
-
 /* ------------------- 共用樣式設定 ------------------- */
 
 .container
-    padding: 0 312px
+    margin: 0 auto
+    padding: 0 12px
+    max-width: 1320px
 
-    +respond-to('phone')
-        padding: 0 36px
-    +respond-to('sphone')
-        padding: 0 13px
-    
 .img-hidden
     overflow: hidden
     object-position: 50% 50%
+
+img
+    max-width: 100%
+    height: auto
 
 /* ------------------- 動畫設定 ------------------- */
 

@@ -3,10 +3,15 @@
 /*------------------------------------*\
 
 .header
-    +size(100%, 787px)
     +backgroundCover('../images/banner.png')
     +flexGrid(flex-end)
     text-align: right
+    height: 787px
+
+    &-container
+        margin: 0 auto
+        padding: 0 12px
+        width: 1320px
 
     +respond-to('sphone')
         +size(100%,396px)
